@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".StoreMapFragment">
+
+    <LinearLayout
+        android:id="@+id/map_info"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="10dp"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/map_info_logo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/logo_height"
+            android:layout_margin="3dp"
+            android:scaleType="center"/>
+        <TextView
+            android:id="@+id/map_info_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            android:layout_margin="@dimen/text_margin"
+            android:textColor="@color/darkGray"/>
+        <TextView
+            android:drawableStart="@drawable/ic_call"
+            android:id="@+id/map_info_phone"
+            android:autoLink="phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            android:layout_margin="@dimen/text_margin"
+            android:textColorLink="@color/darkGray"/>
+        <TextView
+            android:drawableStart="@drawable/ic_directions"
+            android:id="@+id/map_info_address"
+            android:autoLink="map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            android:layout_margin="@dimen/text_margin"
+            android:textColor="@color/darkGray"
+            android:textColorLink="@color/darkGray"/>
+    </LinearLayout>
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/map_view"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+    </com.google.android.gms.maps.MapView>
+</LinearLayout>

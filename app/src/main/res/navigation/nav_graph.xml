@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loadingFragment">
+
+    <fragment
+        android:id="@+id/loadingFragment"
+        android:name="com.test.bradt.LoadingFragment"
+        android:label="fragment_loading"
+        tools:layout="@layout/fragment_loading" >
+        <action
+            android:id="@+id/action_loadingFragment_to_storeGridFragment"
+            app:destination="@id/storeGridFragment"
+            app:popUpTo="@+id/loadingFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/storeGridFragment"
+        android:name="com.test.bradt.StoreGridFragment"
+        android:label="fragment_store_grid"
+        tools:layout="@layout/fragment_store_grid" >
+        <action
+            android:id="@+id/action_storeGridFragment_to_storeMapFragment"
+            app:destination="@id/storeMapFragment" />
+        <action
+            android:id="@+id/action_storeGridFragment_to_loadingFragment2"
+            app:destination="@id/loadingFragment"
+            app:popUpTo="@+id/loadingFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/storeMapFragment"
+        android:name="com.test.bradt.StoreMapFragment"
+        android:label="fragment_store_map"
+        tools:layout="@layout/fragment_store_map" >
+        <action
+            android:id="@+id/action_storeMapFragment_to_loadingFragment2"
+            app:destination="@id/loadingFragment"
+            app:popUpTo="@+id/loadingFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
